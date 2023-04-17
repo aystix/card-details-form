@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+  <div class="content">
+      <div class="left">
+        <div class="front-card">
+          <div class="circles">
+            <div><img src="./images/card-logo.svg" /></div>
+          </div>
+          <div class="card-details">
+            <h2 class="card-number" id="card-numbers">0000 0000 0000 0000</h2>
+            <div class="name-date">
+              <p id="name">Jane Appleseed</p>
+              <p>
+                <span class="month" id="months">00</span><span>/</span
+                ><span class="year" id="years">00</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="back-card">
+          <p class="cvc" id="cvcs">000</p>
+        </div>
+      </div>
+
+      <div class="right">
+        <form action="#" id="form">
+          <div class="input-control">
+            <p class="c-name">CARDHOLDER NAME</p>
+            <input
+              type="text"
+              placeholder="e.g. Jane Appleseed"
+              id="cardholder-name"
+              oninput="updateCardName(this)"
+            />
+            <p class="error-message">name cannot be empty</p>
+          </div>
+          <div class="input-control">
+            <p class="c-number">CARD NUMBER</p>
+            <input
+              type="text"
+              placeholder="e.g. 1234 5678 9123 0000"
+              id="card-number"
+              oninput="updateCardNumber(this)"
+            />
+            <p class="error-message">card number cannot be empty</p>
+          </div>
+
+          <div class="expdate-cvc">
+            <div class="month-year">
+              <div class="input-control">
+                <p>EXP. DATE (MM/YY)</p>
+                <input
+                  type="number"
+                  id="month"
+                  placeholder="MM"
+                  oninput="updateCardMonth(this)"
+                />
+                <input
+                  type="number"
+                  id="year"
+                  placeholder="YY"
+                  oninput="updateCardYear(this)"
+                />
+                <p class="error-message">can't be blank</p>
+              </div>
+            </div>
+            <div class="cvcc">
+              <div class="input-control">
+                <p>CVC</p>
+                <input
+                  type="number"
+                  id="cvc"
+                  placeholder="CVC"
+                  oninput="updateCardCVC(this)"
+                />
+                <p class="error-message">can't be blank</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="first-button" type="submit">Confirm</button>
+        </form>
+
+        <div class="complete-state">
+          <img src="./images/icon-complete.svg" />
+          <h2>THANK YOU!</h2>
+          <p>We've added your card details</p>
+          <button onclick="refreshPage()" class="second-button">Continue</button>
+        </div>
+      </div>
+    </div>
+
+    <script charset="UTF-8" src="index.js" type="text/javascript"></script>
+
+  
+</body>
+</html>

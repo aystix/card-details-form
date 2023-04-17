@@ -1,0 +1,218 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color:hsl(0, 0%, 100%) ;
+    background-image: url(./images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px;
+    position: relative;
+}
+.front-card {
+    background-image: url(./images/bg-card-front.png);
+    height: 250px;
+    width: 350px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 20px;
+    margin-left: 170px;
+}
+.name-date{
+    display: flex;
+    justify-content: space-between;
+    color: hsl(0, 0%, 100%);
+    font-size: 18px;
+}
+.card-number {
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 15px;
+    letter-spacing: 4px;
+}
+.card-details{
+    margin-top: 40px;
+}
+
+.back-card {
+    background: url(./images/bg-card-back.png);
+    height: 250px;
+    width: 350px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 10px;
+    margin-left: 250px;
+}
+.cvc {
+    color:hsl(0, 0%, 100%) ;
+    text-align: right;
+    margin-top: 75px;
+    margin-right: 40px;
+    
+}
+.right {
+    margin-top: 50px;
+    margin-right: 70px;
+}
+.right p {
+    font-size: 12px;
+    color: hsl(278, 68%, 11%);
+    
+}
+.input-control input {
+    height: 35px;
+    margin-top: 5px;
+    width: 280px;
+    padding: 3px;
+    border: 1px solid hsl(270, 3%, 87%);
+    border-radius: 5px;
+    color: black;
+    
+}
+.input-control .error-message {
+    font-size: 12px;
+    color:  hsl(0, 100%, 66%);
+    margin-bottom: 20px;
+    visibility: hidden;
+}
+.input-control.errors input{
+    border: 1px solid hsl(0, 100%, 66%);
+}
+
+input:focus {
+    border: 1px solid #ccc;
+    color: black;
+}
+
+.month-year input{
+    width: 60px;
+    height: 35px;
+    padding: 3px;
+    border: 1px solid hsl(270, 3%, 87%);
+    border-radius: 5px;
+    color: black;
+    margin-top: 5px;
+
+}
+.cvcc input{
+    height: 35px;
+    width: 120px;
+    padding: 3px;
+    border: 1px solid hsl(270, 3%, 87%);
+    border-radius: 5px;
+    color: black;
+    margin-top: 5px;
+    
+}
+.expdate-cvc {
+    display: flex;
+}
+.cvcc{
+    margin-left: 30px;
+}
+
+
+.first-button{
+    width: 280px;
+    height: 35px;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 12px;
+}
+
+.complete-state img{
+    margin-bottom: 15px;
+    height: 50px;
+}
+.complete-state h2 {
+    margin-bottom: 14px;
+    font-size: 30px;
+    color: hsl(278, 68%, 11%);
+}
+.complete-state p {
+    margin-bottom: 9px;
+    color: hsl(279, 6%, 55%);
+    font-size: 18px;
+}
+.second-button{
+    width: 280px;
+    height: 35px;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 14px;
+    
+}
+.complete-state{
+    text-align: center;
+    visibility: hidden;
+}
+
+
+@media(max-width:480px){
+    body {
+        background-color: hsl(0, 0%, 100%) ;
+        background-image: url(./images/bg-main-mobile.png);
+        background-size: contain;
+        position: relative;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        margin: 0 auto;
+    }
+    .back-card {
+        background: url(./images/bg-card-back.png);
+        height: 180px;
+        width: 250px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        padding: 1px;
+        margin: 0 auto;
+        margin-top: -25px;
+    }
+    .front-card {
+        background-image: url(./images/bg-card-front.png);
+        height: 200px;
+        width: 280px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        padding: 18px;
+        margin: 0 auto;
+    
+    }
+    .card-details{
+        margin-top: 3px;
+    }
+    .circles img {
+        width: 55px;
+    }
+    .card-number {
+        color: hsl(0, 0%, 100%);
+        margin-top: 25px;
+        letter-spacing: 4px;
+        font-size: 19px;
+    }
+    .right {
+        margin-right: 0px;
+    
+    }
+    .cvc {
+        color:hsl(0, 0%, 100%) ;
+        text-align: right;
+        margin-top: 60px;
+        margin-right: 30px;
+        
+    }
+}
